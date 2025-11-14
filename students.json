@@ -9,9 +9,9 @@
     "feesPaid": 35000
   },
 
-  "BE25CE1061": {
-    "name": "Vedadny Bukke",
-    "prn": "BE25CE1061",
+  "BE25CE1060": {
+    "name": "Ishita Yelne",
+    "prn": "BE25CE1060",
     "dob": "2007-11-01",
     "branch": "CE",
     "class": "SE",
@@ -19,9 +19,9 @@
     "feesPaid": 82000
   },
 
-  "BE25CE1001": {
-    "name": "Student 1",
-    "prn": "BE25CE1001",
+  "BE25CE1061": {
+    "name": "Vedadny Bukke",
+    "prn": "BE25CE1061",
     "dob": "2007-01-01",
     "branch": "CE",
     "class": "FE",
@@ -29,9 +29,9 @@
     "feesPaid": 10000
   },
 
-  "BE25CE1002": {
-    "name": "Student 2",
-    "prn": "BE25CE1002",
+  "BE25CE1064": {
+    "name": "Prathmesh Jathar",
+    "prn": "BE25CE1064",
     "dob": "2007-02-01",
     "branch": "CE",
     "class": "FE",
