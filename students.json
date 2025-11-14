@@ -1,167 +1,161 @@
 {
-  "B25CE1059": {
+  "BE25CE1059": {
     "name": "Aryan Unhale",
-    "prn": "B25CS0001",
+    "prn": "BE25CE1059",
     "dob": "2007-04-29",
-    "branch": "CS",
+    "branch": "CE",
     "class": "FE",
-    "totalFees": 90000,
-    "feesPaid": 35000,
-    "aadhar": "1111-2222-3333",
-    "mobile": "9876543210"
+    "totalFees": 135000,
+    "feesPaid": 35000
   },
-  "B25CS0002": {
+
+  "BE25CE1061": {
     "name": "Vedadny Bukke",
-    "prn": "B25CS0002",
+    "prn": "BE25CE1061",
     "dob": "2007-11-01",
-    "branch": "CS",
+    "branch": "CE",
     "class": "SE",
-    "totalFees": 85000,
-    "feesPaid": 82000,
-    "aadhar": "2222-3333-4444",
-    "mobile": "9123456780"
+    "totalFees": 135000,
+    "feesPaid": 82000
   },
-  "B25IT0003": {
-    "name": "Rohan Patil",
-    "prn": "B25IT0003",
-    "dob": "2006-08-15",
-    "branch": "IT",
-    "class": "TE",
-    "totalFees": 92000,
-    "feesPaid": 92000,
-    "aadhar": "3333-4444-5555",
-    "mobile": "9988776655"
-  },
-  "B25EN0004": {
-    "name": "Sneha Kulkarni",
-    "prn": "B25EN0004",
-    "dob": "2006-03-02",
-    "branch": "ENTC",
-    "class": "BE",
-    "totalFees": 88000,
-    "feesPaid": 40000,
-    "aadhar": "4444-5555-6666",
-    "mobile": "9812345678"
-  },
-  "B25ME0005": {
-    "name": "Aditya Sharma",
-    "prn": "B25ME0005",
-    "dob": "2005-12-12",
-    "branch": "ME",
-    "class": "BE",
-    "totalFees": 88000,
-    "feesPaid": 88000,
-    "aadhar": "5555-6666-7777",
-    "mobile": "9701234567"
-  },
-  "B25AI0006": {
-    "name": "Ishaan Joshi",
-    "prn": "B25AI0006",
-    "dob": "2007-01-21",
-    "branch": "AI",
+
+  "BE25CE1001": {
+    "name": "Student 1",
+    "prn": "BE25CE1001",
+    "dob": "2007-01-01",
+    "branch": "CE",
     "class": "FE",
-    "totalFees": 95000,
-    "feesPaid": 30000,
-    "aadhar": "6666-7777-8888",
-    "mobile": "9638527410"
+    "totalFees": 135000,
+    "feesPaid": 10000
   },
-  "B25CS0007": {
-    "name": "Pranav Deshmukh",
-    "prn": "B25CS0007",
-    "dob": "2006-06-06",
-    "branch": "CS",
-    "class": "TE",
-    "totalFees": 90000,
-    "feesPaid": 45000,
-    "aadhar": "7777-8888-9999",
-    "mobile": "9012345678"
-  },
-  "B25IT0008": {
-    "name": "Maya Rane",
-    "prn": "B25IT0008",
-    "dob": "2006-09-09",
-    "branch": "IT",
-    "class": "SE",
-    "totalFees": 90000,
-    "feesPaid": 45000,
-    "aadhar": "8888-9999-0000",
-    "mobile": "9001122334"
-  },
-  "B25EN0009": {
-    "name": "Kunal Patil",
-    "prn": "B25EN0009",
-    "dob": "2006-05-05",
-    "branch": "ENTC",
-    "class": "TE",
-    "totalFees": 88000,
-    "feesPaid": 30000,
-    "aadhar": "9999-0000-1111",
-    "mobile": "9988001122"
-  },
-  "B25ME0010": {
-    "name": "Snehal More",
-    "prn": "B25ME0010",
-    "dob": "2005-07-30",
-    "branch": "ME",
-    "class": "BE",
-    "totalFees": 87000,
-    "feesPaid": 87000,
-    "aadhar": "0000-1111-2222",
-    "mobile": "9870011223"
-  },
-  "B25CS0011": {
-    "name": "Harsh Jadhav",
-    "prn": "B25CS0011",
-    "dob": "2007-10-10",
-    "branch": "CS",
+
+  "BE25CE1002": {
+    "name": "Student 2",
+    "prn": "BE25CE1002",
+    "dob": "2007-02-01",
+    "branch": "CE",
     "class": "FE",
-    "totalFees": 90000,
-    "feesPaid": 10000,
-    "aadhar": "1212-3434-5656",
-    "mobile": "9898989898"
+    "totalFees": 135000,
+    "feesPaid": 20000
   },
-  "B25AI0012": {
-    "name": "Riya Gokhale",
-    "prn": "B25AI0012",
-    "dob": "2006-02-02",
-    "branch": "AI",
+
+  "BE25CE1003": {
+    "name": "Student 3",
+    "prn": "BE25CE1003",
+    "dob": "2007-03-01",
+    "branch": "CE",
+    "class": "FE",
+    "totalFees": 135000,
+    "feesPaid": 30000
+  },
+
+  "BE25CE1004": {
+    "name": "Student 4",
+    "prn": "BE25CE1004",
+    "dob": "2007-04-01",
+    "branch": "CE",
     "class": "SE",
-    "totalFees": 95000,
-    "feesPaid": 60000,
-    "aadhar": "2323-4545-6767",
-    "mobile": "9765432109"
+    "totalFees": 135000,
+    "feesPaid": 25000
   },
-  "B25IT0013": {
-    "name": "Aakash Salunkhe",
-    "prn": "B25IT0013",
-    "dob": "2006-04-18",
-    "branch": "IT",
+
+  "BE25CE1005": {
+    "name": "Student 5",
+    "prn": "BE25CE1005",
+    "dob": "2007-05-01",
+    "branch": "CE",
+    "class": "SE",
+    "totalFees": 135000,
+    "feesPaid": 40000
+  },
+
+  "BE25CE1006": {
+    "name": "Student 6",
+    "prn": "BE25CE1006",
+    "dob": "2007-06-01",
+    "branch": "CE",
     "class": "TE",
-    "totalFees": 92000,
-    "feesPaid": 50000,
-    "aadhar": "3434-5656-7878",
-    "mobile": "9120012345"
+    "totalFees": 135000,
+    "feesPaid": 50000
   },
-  "B25EN0014": {
-    "name": "Neha Patankar",
-    "prn": "B25EN0014",
-    "dob": "2006-11-25",
-    "branch": "ENTC",
-    "class": "SE",
-    "totalFees": 88000,
-    "feesPaid": 44000,
-    "aadhar": "4545-6767-8989",
-    "mobile": "9011002203"
+
+  "BE25CE1007": {
+    "name": "Student 7",
+    "prn": "BE25CE1007",
+    "dob": "2007-07-01",
+    "branch": "CE",
+    "class": "TE",
+    "totalFees": 135000,
+    "feesPaid": 55000
   },
-  "B25ME0015": {
-    "name": "Devang Kulkar",
-    "prn": "B25ME0015",
-    "dob": "2005-03-08",
-    "branch": "ME",
+
+  "BE25CE1008": {
+    "name": "Student 8",
+    "prn": "BE25CE1008",
+    "dob": "2007-08-01",
+    "branch": "CE",
     "class": "BE",
-    "totalFees": 88000,
-    "feesPaid": 30000,
-    "aadhar": "5656-7878-9090",
-    "mobile": "9987665544"
+    "totalFees": 135000,
+    "feesPaid": 70000
+  },
+
+  "BE25CE1009": {
+    "name": "Student 9",
+    "prn": "BE25CE1009",
+    "dob": "2007-09-01",
+    "branch": "CE",
+    "class": "BE",
+    "totalFees": 135000,
+    "feesPaid": 65000
+  },
+
+  "BE25CE1010": {
+    "name": "Student 10",
+    "prn": "BE25CE1010",
+    "dob": "2007-10-01",
+    "branch": "CE",
+    "class": "FE",
+    "totalFees": 135000,
+    "feesPaid": 30000
+  },
+
+  "BE25CE1011": {
+    "name": "Student 11",
+    "prn": "BE25CE1011",
+    "dob": "2007-11-02",
+    "branch": "CE",
+    "class": "SE",
+    "totalFees": 135000,
+    "feesPaid": 30000
+  },
+
+  "BE25CE1012": {
+    "name": "Student 12",
+    "prn": "BE25CE1012",
+    "dob": "2007-12-01",
+    "branch": "CE",
+    "class": "TE",
+    "totalFees": 135000,
+    "feesPaid": 35000
+  },
+
+  "BE25CE1013": {
+    "name": "Student 13",
+    "prn": "BE25CE1013",
+    "dob": "2007-01-15",
+    "branch": "CE",
+    "class": "BE",
+    "totalFees": 135000,
+    "feesPaid": 75000
+  },
+
+  "BE25CE1014": {
+    "name": "Student 14",
+    "prn": "BE25CE1014",
+    "dob": "2007-02-15",
+    "branch": "CE",
+    "class": "FE",
+    "totalFees": 135000,
+    "feesPaid": 45000
   }
 }
