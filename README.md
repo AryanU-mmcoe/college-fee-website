@@ -16,9 +16,6 @@ Files:
 - students.json
 - assets/mmcoe-logo.png 
 
-Deploy:
-- Push this repo to GitHub.
-- In repo settings -> Pages enable serving from `main` branch (root).
 - Visit `https://aryanu-mmcoe.github.io/college-fee-website/`
 
 Notes:
