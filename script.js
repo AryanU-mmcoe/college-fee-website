@@ -6,7 +6,7 @@ async function generateReceipt() {
         return;
     }
 
-    const url = "https://raw.githubusercontent.com/AryanU-mmcoe/college-fee-website/students.json";
+    const url = "https://raw.githubusercontent.com/AryanU-mmcoe/college-fee-website/main/students.json";
 
     try {
         const response = await fetch(url);
