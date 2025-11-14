@@ -1,0 +1,21 @@
+{
+  "BE25CE1059": {
+    "name": "Aryan Unhale",
+    "prn": "BE25CE1059",
+    "dob": "2007-04-29",
+    "branch": "CS",
+    "class": "FE",
+    "totalFees": 90000,
+    "feesPaid": 35000
+  },
+
+  "BE25CE1059": {
+    "name": "Vedadny Bukke",
+    "prn": "BE25CE1061",
+    "dob": "2007-11-01",
+    "branch": "CS",
+    "class": "SE",
+    "totalFees": 85000,
+    "feesPaid": 82000
+  }
+}
