@@ -1,180 +1,98 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MMCOE Fee Receipt System</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MMCOE — Fee Receipt</title>
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: "Poppins", sans-serif;
-            background: #eef4ff;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
-        }
+  <link rel="stylesheet" href="styles.css" />
 
-        .container {
-            width: 100%;
-            max-width: 550px;
-            background: #fff;
-            border-radius: 12px;
-            padding: 25px 30px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-
-        .header img {
-            width: 110px;
-            margin-bottom: 10px;
-        }
-
-        .header h2 {
-            font-size: 22px;
-            margin: 0;
-            font-weight: 600;
-            color: #003366;
-        }
-
-        label {
-            font-weight: 500;
-            color: #003366;
-            margin-top: 12px;
-            display: block;
-        }
-
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 6px;
-            border: 1px solid #bfcbe0;
-            font-size: 14px;
-        }
-
-        button {
-            width: 100%;
-            padding: 12px;
-            background: #003366;
-            color: white;
-            border: none;
-            margin-top: 20px;
-            cursor: pointer;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 500;
-            transition: 0.2s ease;
-        }
-
-        button:hover {
-            background: #004a99;
-        }
-
-        .receipt-card {
-            background: #f3f7ff;
-            padding: 20px;
-            margin-top: 25px;
-            border-radius: 10px;
-            display: none;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-        }
-
-        .receipt-card h3 {
-            text-align: center;
-            color: #003366;
-            margin-top: 0;
-        }
-
-        .rec-item {
-            font-size: 15px;
-            margin: 6px 0;
-        }
-
-        .btn-row {
-            margin-top: 20px;
-            display: flex;
-            gap: 10px;
-        }
-
-        .btn-row button {
-            flex: 1;
-        }
-    </style>
-
+  <!-- html2pdf for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-
-<div class="container">
-    <div class="header">
-        <img src="https://upload.wikimedia.org/wikipedia/en/2/23/MMCOE_logo.png" alt="MMCOE Logo">
-        <h2>MMCOE Fee Receipt System</h2>
-    </div>
-
-    <label>Student Name</label>
-    <input id="name" required placeholder="Enter full name">
-
-    <label>PRN Number</label>
-    <input id="prn" required placeholder="Enter PRN">
-
-    <button onclick="fetchReceipt()">Get Receipt</button>
-
-    <div id="receiptCard" class="receipt-card">
-        <h3>Student Fee Receipt</h3>
-
-        <p class="rec-item"><strong>Name:</strong> <span id="rName"></span></p>
-        <p class="rec-item"><strong>PRN:</strong> <span id="rPrn"></span></p>
-        <p class="rec-item"><strong>Total Fees:</strong> ₹<span id="rTotal"></span></p>
-        <p class="rec-item"><strong>Fees Paid:</strong> ₹<span id="rPaid"></span></p>
-        <p class="rec-item"><strong>Remaining:</strong> ₹<span id="rRemain"></span></p>
-
-        <div class="btn-row">
-            <button onclick="window.print()">Print</button>
-            <button onclick="downloadPDF()">Download PDF</button>
+  <main class="page">
+    <section class="card form-card">
+      <div class="brand">
+        <img src="assets/mmcoe-logo.png" alt="MMCOE Logo" class="logo" />
+        <div class="brand-text">
+          <h1>Marathwada Mitra Mandal's</h1>
+          <h2>College of Engineering</h2>
+          <em class="moto">‘येथे बहुतांचे हित’</em>
         </div>
-    </div>
-</div>
+      </div>
 
+      <div class="form-grid">
+        <label>
+          Student Name
+          <input id="name" placeholder="e.g. Aarav Patil" />
+        </label>
 
-<script>
-    const API_URL = "https://fee-receipt-backend-cok9.onrender.com/api/receipt";
+        <label>
+          PRN Number
+          <input id="prn" placeholder="e.g. B25CS0001" />
+        </label>
 
-    async function fetchReceipt() {
-        const prn = document.getElementById("prn").value.trim();
+        <label>
+          Date (optional)
+          <input id="date" type="date" />
+        </label>
 
-        if (!prn) {
-            alert("Please enter PRN");
-            return;
-        }
+        <label>
+          Class
+          <input id="class" placeholder="FE / SE / TE / BE" />
+        </label>
 
-        const res = await fetch(`${API_URL}/${prn}`);
+        <label>
+          Branch
+          <select id="branch">
+            <option value="">-- Select branch --</option>
+            <option value="CS">Computer (CS)</option>
+            <option value="IT">Information Tech (IT)</option>
+            <option value="ENTC">Electronics (ENTC)</option>
+            <option value="ME">Mechanical (ME)</option>
+            <option value="AI">AI & DS (AI)</option>
+          </select>
+        </label>
 
-        if (!res.ok) {
-            alert("Student not found!");
-            return;
-        }
+        <div class="actions">
+          <button id="btnFetch" class="btn primary">Get Receipt</button>
+          <button id="btnClear" class="btn ghost">Clear</button>
+        </div>
+      </div>
+    </section>
 
-        const data = await res.json();
+    <section class="card receipt-card" id="receiptCard" aria-hidden="true">
+      <div id="receipt" class="receipt-content">
+        <header class="receipt-header">
+          <img src="assets/mmcoe-logo.png" alt="MMCOE Logo" class="receipt-logo" />
+          <div>
+            <h3>Marathwada Mitra Mandal's</h3>
+            <h4>College of Engineering</h4>
+            <small class="moto">‘येथे बहुतांचे हित’</small>
+          </div>
+        </header>
 
-        document.getElementById("receiptCard").style.display = "block";
-        document.getElementById("rName").innerText = data.name;
-        document.getElementById("rPrn").innerText = data.prn;
-        document.getElementById("rTotal").innerText = data.totalFees;
-        document.getElementById("rPaid").innerText = data.feesPaid;
-        document.getElementById("rRemain").innerText = data.balanceRemaining;
-    }
+        <div class="receipt-body" id="receiptBody">
+          <!-- populated by script -->
+        </div>
 
-    function downloadPDF() {
-        window.print(); // Simple for now (can add jsPDF if you want)
-    }
-</script>
+        <footer class="receipt-footer">
+          <div class="receipt-actions">
+            <button id="btnPrint" class="btn outline">Print</button>
+            <button id="btnPdf" class="btn primary">Download PDF</button>
+          </div>
+          <small class="powered">Generated by MMCOE Fee System</small>
+        </footer>
+      </div>
+    </section>
+  </main>
 
+  <div id="toast" class="toast" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
