@@ -4,7 +4,7 @@ This is a Mini Project which features a website where students can enter their P
 
 This is a Mini Project Made by:
 - Aryan Unhale [B25CE1059]
-- Ishita Yelne [B25CE1050]
+- Ishita Yelne [B25CE1060]
 - Vedadny Bukke [B25CE1061]
 - Prathmesh Jathar [B25CE1064]
 
