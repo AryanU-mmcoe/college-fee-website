@@ -20,4 +20,4 @@ Files:
 
 Notes:
 - `students.json` is the local DB.
-- PRN format expected: B25<BRANCH><4 digits> (eg. B25CS0001).
+- PRN format expected: B25<BRANCH><4 digits> (eg. B25CE0001).
