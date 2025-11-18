@@ -57,7 +57,7 @@ document.getElementById('btnFetch').addEventListener('click', async (e) => {
 
   // Optionally validate format
   if (!isValidPrn(prn)) {
-    // we don't force it - but warn
+    // basic warning
     showToast('PRN format looks off. Expected B25<BRANCH><4digits> e.g. B25CS0001');
     // continue attempt anyway
   }
