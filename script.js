@@ -43,7 +43,7 @@ function normalizePrn(prn) {
 }
 
 function isValidPrn(prn) {
-  // PRN format: B25<BRANCH><4digits> e.g. B25CS0001
+  // PRN format: B25<BRANCH><4digits> e.g. B25CE1059
   return /^B25[A-Z]{2}\d{4}$/.test(prn);
 }
 
