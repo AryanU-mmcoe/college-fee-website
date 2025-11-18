@@ -39,9 +39,9 @@
     "feesPaid": 20000
   },
 
-  "BE25CE1003": {
-    "name": "Student 3",
-    "prn": "BE25CE1003",
+  "BE25CE1066": {
+    "name": "Sanket Patil",
+    "prn": "BE25CE1066",
     "dob": "2007-03-01",
     "branch": "CE",
     "class": "FE",
@@ -49,9 +49,9 @@
     "feesPaid": 30000
   },
 
-  "BE25CE1004": {
-    "name": "Student 4",
-    "prn": "BE25CE1004",
+  "BE25CE1027": {
+    "name": "Amrut Lohar",
+    "prn": "BE25CE1027",
     "dob": "2007-04-01",
     "branch": "CE",
     "class": "SE",
@@ -59,19 +59,19 @@
     "feesPaid": 25000
   },
 
-  "BE25CE1005": {
-    "name": "Student 5",
-    "prn": "BE25CE1005",
-    "dob": "2007-05-01",
+  "BE25CE1068": {
+    "name": "Ritesh Shinde",
+    "prn": "BE25CE1068",
+    "dob": "2006-05-01",
     "branch": "CE",
     "class": "SE",
     "totalFees": 135000,
     "feesPaid": 40000
   },
 
-  "BE25CE1006": {
-    "name": "Student 6",
-    "prn": "BE25CE1006",
+  "BE25CE1055": {
+    "name": "Aniruddha Tadawale",
+    "prn": "BE25CE1055",
     "dob": "2007-06-01",
     "branch": "CE",
     "class": "TE",
@@ -79,9 +79,9 @@
     "feesPaid": 50000
   },
 
-  "BE25CE1007": {
-    "name": "Student 7",
-    "prn": "BE25CE1007",
+  "BE25CE1069": {
+    "name": "Prathamesh Terdale",
+    "prn": "BE25CE1069",
     "dob": "2007-07-01",
     "branch": "CE",
     "class": "TE",
@@ -89,9 +89,9 @@
     "feesPaid": 55000
   },
 
-  "BE25CE1008": {
-    "name": "Student 8",
-    "prn": "BE25CE1008",
+  "BE25CE1058": {
+    "name": "Apurv Tulpule",
+    "prn": "BE25CE1058",
     "dob": "2007-08-01",
     "branch": "CE",
     "class": "BE",
@@ -99,9 +99,9 @@
     "feesPaid": 70000
   },
 
-  "BE25CE1009": {
-    "name": "Student 9",
-    "prn": "BE25CE1009",
+  "BE25CE1051": {
+    "name": "Amod Sahastrabuddhe",
+    "prn": "BE25CE1051",
     "dob": "2007-09-01",
     "branch": "CE",
     "class": "BE",
@@ -109,9 +109,9 @@
     "feesPaid": 65000
   },
 
-  "BE25CE1010": {
-    "name": "Student 10",
-    "prn": "BE25CE1010",
+  "BE25CE1067": {
+    "name": "Sahil Shah",
+    "prn": "BE25CE1067",
     "dob": "2007-10-01",
     "branch": "CE",
     "class": "FE",
@@ -119,9 +119,9 @@
     "feesPaid": 30000
   },
 
-  "BE25CE1011": {
-    "name": "Student 11",
-    "prn": "BE25CE1011",
+  "BE25CE1054": {
+    "name": "Aarush Shivpuje",
+    "prn": "BE25CE1054",
     "dob": "2007-11-02",
     "branch": "CE",
     "class": "SE",
@@ -129,9 +129,9 @@
     "feesPaid": 30000
   },
 
-  "BE25CE1012": {
-    "name": "Student 12",
-    "prn": "BE25CE1012",
+  "BE25CE1011": {
+    "name": "Abhishek Godbole",
+    "prn": "BE25CE1011",
     "dob": "2007-12-01",
     "branch": "CE",
     "class": "TE",
@@ -139,9 +139,9 @@
     "feesPaid": 35000
   },
 
-  "BE25CE1013": {
-    "name": "Student 13",
-    "prn": "BE25CE1013",
+  "BE25CE1044": {
+    "name": "Ganesh Pawar",
+    "prn": "BE25CE1044",
     "dob": "2007-01-15",
     "branch": "CE",
     "class": "BE",
@@ -149,9 +149,9 @@
     "feesPaid": 75000
   },
 
-  "BE25CE1014": {
-    "name": "Student 14",
-    "prn": "BE25CE1014",
+  "BE25CE1000": {
+    "name": "Narendra Modi",
+    "prn": "BE25CE1000",
     "dob": "2007-02-15",
     "branch": "CE",
     "class": "FE",
