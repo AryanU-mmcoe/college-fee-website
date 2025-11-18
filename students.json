@@ -84,7 +84,7 @@
     "prn": "BE25CE1069",
     "dob": "2007-07-01",
     "branch": "CE",
-    "class": "TY",
+    "class": "SY",
     "totalFees": 135000,
     "feesPaid": 55000
   },
@@ -94,7 +94,7 @@
     "prn": "BE25CE1058",
     "dob": "2007-08-01",
     "branch": "CE",
-    "class": "BY",
+    "class": "LY",
     "totalFees": 135000,
     "feesPaid": 70000
   },
@@ -104,7 +104,7 @@
     "prn": "BE25CE1051",
     "dob": "2007-09-01",
     "branch": "CE",
-    "class": "BY",
+    "class": "SY",
     "totalFees": 135000,
     "feesPaid": 65000
   },
@@ -144,7 +144,7 @@
     "prn": "BE25CE1044",
     "dob": "2007-01-15",
     "branch": "CE",
-    "class": "BY",
+    "class": "FY",
     "totalFees": 135000,
     "feesPaid": 75000
   },
@@ -154,7 +154,7 @@
     "prn": "BE25CE1000",
     "dob": "2007-02-15",
     "branch": "CE",
-    "class": "FY",
+    "class": "LY",
     "totalFees": 135000,
     "feesPaid": 45000
   }
