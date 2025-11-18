@@ -1,6 +1,6 @@
 # MMCOE Fee Receipt System
 
-This is a Mini Project which features a website where students can enter their PRN and get their fee receipt and other details.
+This is a Mini Project which features a website where students can enter their Name and PRN and get their fee receipt and other details.
 
 This is a Mini Project Made by:
 - Aryan Unhale [B25CE1059]
