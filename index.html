@@ -1,183 +1,104 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MMCOE Fee Receipt</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: url('background.jpg') center/cover no-repeat fixed;
-      backdrop-filter: blur(4px);
-      padding: 0;
-    }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MMCOE — Fee Receipt</title>
 
-    .overlay {
-      background: rgba(255, 255, 255, 0.85);
-      min-height: 100vh;
-      padding: 40px 0;
-    }
+  <link rel="icon" href="assets/favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      align-items: flex-start;
-    }
+  <link rel="stylesheet" href="styles.css" />
 
-    .card {
-      background: white;
-      width: 50%;
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      border-top: 6px solid #0a3d62;
-      animation: fadeIn 0.6s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      margin-bottom: 20px;
-    }
-
-    .header img {
-      width: 70px;
-      height: 70px;
-    }
-
-    h2 {
-      margin: 0;
-      font-size: 22px;
-      color: #0a3d62;
-      font-weight: 700;
-    }
-
-    h4 { margin: 0; color: #b71540; font-size: 14px; }
-
-    input, select {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      margin-top: 5px;
-      margin-bottom: 15px;
-      font-size: 15px;
-    }
-
-    button {
-      padding: 12px 20px;
-      background: #0a3d62;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 15px;
-      transition: 0.2s;
-    }
-
-    button:hover { background: #07406a; }
-
-    #receipt {
-      display: none;
-      background: white;
-      padding: 25px;
-      border-radius: 12px;
-      border-top: 5px solid #0a3d62;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .actions button { margin-right: 10px; }
-  </style>
+  <!-- html2pdf for PDF download -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-  <div class="overlay">
-    <div class="container">
-      <!-- LEFT SIDE - FORM -->
-      <div class="card">
-        <div class="header">
-          <img src="mmcoe_logo.png" />
-          <div>
-            <h2>Marathwada Mitra Mandal's<br/>College of Engineering</h2>
-            <h4>यथे बहूतांचे हित</h4>
-          </div>
+  <main class="page">
+    
+    <!-- FORM CARD -->
+    <section class="card form-card">
+      <div class="brand">
+        <img src="assets/mmcoe-logo.png" alt="MMCOE Logo" class="logo" />
+        <div class="brand-text">
+          <h1>Marathwada Mitra Mandal's</h1>
+          <h2>College of Engineering</h2>
+          <em class="moto">‘येथे बहुतांचे हित’</em>
         </div>
-
-        <label>Student Name</label>
-        <input id="name" placeholder="e.g. Aarav Patil" />
-
-        <label>PRN Number</label>
-        <input id="prn" placeholder="e.g. B25CE0001" />
-
-        <label>Date (optional)</label>
-        <input type="date" id="date" />
-
-        <label>Class</label>
-        <select id="class">
-          <option value="FE">FE</option>
-          <option value="SE">SE</option>
-          <option value="TE">TE</option>
-          <option value="BE">BE</option>
-        </select>
-
-        <label>Branch</label>
-        <select id="branch">
-          <option value="CE">Computer Engineering</option>
-        </select>
-
-        <button onclick="generateReceipt()">Get Receipt</button>
       </div>
 
-      <!-- RIGHT SIDE - RECEIPT -->
-      <div id="receipt" class="card"></div>
-    </div>
-  </div>
+      <div class="form-grid">
+        <label>
+          Student Name
+          <input id="name" placeholder="e.g. Aryan Unhale" />
+        </label>
 
-  <script>
-    async function generateReceipt() {
-      const name = document.getElementById("name").value.trim();
-      const prn = document.getElementById("prn").value.trim();
-      const date = document.getElementById("date").value;
+        <label>
+          PRN Number
+          <input id="prn" placeholder="e.g. B25CE1059" />
+        </label>
 
-      if (!prn) return alert("Enter a valid PRN!");
+        <label>
+          Date (optional)
+          <input id="date" type="date" />
+        </label>
 
-      const res = await fetch("students.json");
-      const data = await res.json();
+        <label>
+          Class
+          <input id="class" placeholder="FY / SY / TY / LY" />
+        </label>
 
-      if (!data[prn]) return alert("Student not found!");
-
-      const s = data[prn];
-      const remaining = 135000 - s.feesPaid;
-
-      document.getElementById("receipt").style.display = "block";
-      document.getElementById("receipt").innerHTML = `
-        <h2>MMCOE Fee Receipt</h2>
-        <hr>
-        <p><b>Name:</b> ${s.name}</p>
-        <p><b>PRN:</b> ${s.prn}</p>
-        <p><b>Date:</b> ${date || "-"}</p>
-        <p><b>DOB:</b> ${s.dob}</p>
-        <p><b>Class:</b> ${s.class}</p>
-        <p><b>Branch:</b> CE</p>
-        <p><b>Total Fees:</b> ₹135000</p>
-        <p><b>Fees Paid:</b> ₹${s.feesPaid}</p>
-        <p><b>Remaining:</b> ₹${remaining}</p>
+        <label>
+          Branch
+          <select id="branch">
+            <option value="">-- Select branch --</option>
+            <option value="CS">Computer (CE)</option>
+            <option value="IT">Information Tech (IT)</option>
+            <option value="ENTC">Electronics (ENTC)</option>
+            <option value="ME">Mechanical (ME)</option>
+            <option value="AI">AI & DS (AI)</option>
+          </select>
+        </label>
 
         <div class="actions">
-          <button onclick="window.print()">Print</button>
+          <button id="btnFetch" class="btn primary">Get Receipt</button>
+          <button id="btnClear" class="btn ghost">Clear</button>
         </div>
-      `;
-    }
-  </script>
+      </div>
+    </section>
+
+    <!-- RECEIPT CARD -->
+    <section class="card receipt-card" id="receiptCard" aria-hidden="true">
+      <div id="receipt" class="receipt-content">
+        
+        <header class="receipt-header">
+          <img src="assets/mmcoe-logo.png" alt="MMCOE Logo" class="receipt-logo" />
+          <div>
+            <h3>Marathwada Mitra Mandal's</h3>
+            <h4>College of Engineering</h4>
+            <small class="moto">‘येथे बहुतांचे हित’</small>
+          </div>
+        </header>
+
+        <div class="receipt-body" id="receiptBody">
+          <!-- populated by script.js -->
+        </div>
+
+        <footer class="receipt-footer">
+          <div class="receipt-actions">
+            <button id="btnPrint" class="btn outline">Print</button>
+            <button id="btnPdf" class="btn primary">Download PDF</button>
+          </div>
+          <small class="powered">Generated by MMCOE Fee System</small>
+        </footer>
+
+      </div>
+    </section>
+
+  </main>
+
+  <div id="toast" class="toast" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
 </body>
 </html>
