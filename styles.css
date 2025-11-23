@@ -11,42 +11,34 @@
 }
 
 *{box-sizing:border-box}
+
+/* ===== NEW BACKGROUND IMAGE + OVERLAY ===== */
 body{
   margin:0;
   font-family: "Poppins",system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
-  background: linear-gradient(180deg,var(--bg),#f9fcff 70%);
-  color:#111827;
-  -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
+
+  /* Background image */
+  background: url("assets/mmcoe-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+
+  /* Enable overlay layer */
+  position: relative;
   min-height:100vh;
 }
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Poppins", sans-serif;
 
-    /* MMCOE background image */
-    background: url("assets/mmcoe-bg.jpg") no-repeat center center fixed;
-    background-size: cover;
+/* Subtle blur + dark tint */
+body::before{
+  content:"";
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 
-    /* subtle overlay so text stays readable */
-    position: relative;
-}
+  background: rgba(0,0,0,0.30); /* readability tint */
+  backdrop-filter: blur(3px);
 
-body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    /* slight dark tint for clarity */
-    background: rgba(0, 0, 0, 0.35);
-
-    /* blur to hide noise */
-    backdrop-filter: blur(3px);
-    z-index: -1;
+  z-index:-1;
 }
 
 .page{
@@ -65,6 +57,15 @@ body::before {
   border-radius:14px;
   box-shadow:0 10px 30px rgba(10,25,47,0.08);
   padding:22px;
+}
+
+/* ===== LIGHT GLASS EFFECT ON CARDS (NEW) ===== */
+.card,
+.form-card,
+.receipt-card {
+  background: rgba(255,255,255,0.25) !important;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.35);
 }
 
 .form-card{
@@ -104,6 +105,13 @@ input:focus,select:focus{box-shadow:0 6px 18px rgba(2,66,129,0.06);border-color:
   padding:10px 14px;border-radius:8px;border:0;cursor:pointer;font-weight:600;font-size:14px;
   transition:transform .12s ease,box-shadow .12s ease;
 }
+
+/* ===== BUTTON GLOW-UP (MINOR UPGRADE) ===== */
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: .95;
+}
+
 .btn.primary{background:var(--accent);color:#fff;box-shadow:0 8px 20px rgba(0,47,108,0.12)}
 .btn.primary:hover{transform:translateY(-3px)}
 .btn.ghost{background:transparent;color:var(--accent);border:1px solid #e9f2ff}
