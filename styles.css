@@ -20,6 +20,34 @@ body{
   -moz-osx-font-smoothing:grayscale;
   min-height:100vh;
 }
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+
+    /* MMCOE background image */
+    background: url("assets/mmcoe-bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+
+    /* subtle overlay so text stays readable */
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    /* slight dark tint for clarity */
+    background: rgba(0, 0, 0, 0.35);
+
+    /* blur to hide noise */
+    backdrop-filter: blur(3px);
+    z-index: -1;
+}
 
 .page{
   max-width:1100px;
