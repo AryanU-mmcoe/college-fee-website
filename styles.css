@@ -142,6 +142,13 @@ input:focus,select:focus{box-shadow:0 6px 18px rgba(2,66,129,0.06);border-color:
 }
 .toast.show{opacity:1;transform:translateY(0)}
 
+/* Make form labels visible on bright backgrounds */
+label {
+  color: #ffffff !important;
+  font-weight: 600;
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+}
+
 /* responsive */
 @media (max-width:980px){
   .page{flex-direction:column;align-items:center;padding:12px}
